@@ -16,6 +16,6 @@
 
 ```
 npm install
-webpack -w
+npm start
 在浏览器中打开 index.html
 ```

@@ -4,18 +4,21 @@
   "description": "",
   "main": "obser.js",
   "scripts": {
+    "start": "webpack --mode development -w -d",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.24.1",
-    "webpack": "^3.6.0"
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.0"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
+    "@babel/runtime": "^7.7.7",
     "jquery": "^3.2.1"
   }
 }

@@ -1,21 +1,21 @@
 module.exports = {
-  devtool: 'source-map',
-  entry: [
-    "babel-polyfill",
-    "./test.js"
-  ],
+  entry: './test.js',
   output: {
-    path: __dirname + '/output/',
-    publicPath: "/output/",
-    filename: 'index.js'
+    filename: 'bundle.js'
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader', // 'babel-loader' is also a legal name to reference
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-transform-runtime']
+          }
+        }
       }
     ]
   }
-};
+}
